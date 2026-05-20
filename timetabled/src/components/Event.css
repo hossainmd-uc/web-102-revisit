@@ -1,0 +1,61 @@
+/* Container layout inside the table cell */
+.Event {
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  line-height: 1.3;
+  padding: 8px 10px;
+  margin: 4px;
+  border-radius: 6px;
+  border-left: 4px solid #6366f1; /* Default accent border */
+  background-color: #f0f2fe; /* Default background tint */
+  color: #4338ca; /* Default text color */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Hover effect to make it feel interactive */
+.Event:hover {
+  transform: translateY(-1px);
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  filter: brightness(0.97);
+}
+
+/* --- Optional: Color Coding Rules --- 
+   Using the :has() selector or attribute selectors to change colors automatically 
+   based on common words in your schedule dataset. */
+
+/* LeetCode & Interview Prep (Orange Accent) */
+.Event:has(text *= "LeetCode"),
+.Event:has(text *= "Interview") {
+  background-color: #fff7ed;
+  color: #c2410c;
+  border-left-color: #f97316;
+}
+
+/* CodePath Activities (Green Accent) */
+.Event:has(text *= "CodePath") {
+  background-color: #f0fdf4;
+  color: #15803d;
+  border-left-color: #22c55e;
+}
+
+/* Physical Fitness / Gym (Purple Accent) */
+.Event:has(text *= "Gym") {
+  background-color: #faf5ff;
+  color: #6b21a8;
+  border-left-color: #a855f7;
+}
+
+/* Essential Meetings / Standup (Blue/Cyan Accent) */
+.Event:has(text *= "Meeting"),
+.Event:has(text *= "Standup") {
+  background-color: #ecfeff;
+  color: #0e7490;
+  border-left-color: #06b6d4;
+}
