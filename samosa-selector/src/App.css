@@ -1,0 +1,60 @@
+.App {
+  margin: 0 auto;
+}
+
+.samosa {
+  height: 16em;
+  padding: 1.5em;
+  margin: 0 auto;
+  text-align: center;
+  transition: height 0.1s ease-in-out;
+}
+
+.samosa:hover {
+  height: 18em;
+  transition: height 0.1s ease-in-out;
+
+  cursor: pointer;
+}
+
+.container {
+  top: 50px;
+  display: flex;
+  margin-top: 50px;
+}
+
+.upgrade {
+  border: 1px solid rgba(153, 153, 153, 0.497);
+  padding: 20px 10px;
+  margin-right: 25px;
+  width: 200px;
+  line-height: 0.5;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.3em 1em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+
+  color: rgba(255, 255, 255, 0.87);
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.08s ease-in-out;
+}
+
+button:hover {
+  background-color: #754487;
+  transition: background-color 0.08s ease-in-out;
+}
+
+button:active {
+  transform: scale(0.9);
+}
+
+.samosa:active {
+  transform: scale(0.9);
+  transition: all 0.05s ease-in-out;
+}
